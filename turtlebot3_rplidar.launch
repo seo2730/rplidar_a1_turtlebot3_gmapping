@@ -1,0 +1,7 @@
+<launch>
+ <arg name="set_frame_id" default="base_link"/>
+ <node pkg="rplidar_ros" type="rplidarNode" name="rplidarNode" output="screen">
+   <param name="port" value="/dev/ttyUSB0"/>
+   <param name="frame_id" value="$(arg set_frame_id)"/>
+ </node>
+</launch>
